@@ -744,7 +744,7 @@ section { padding: var(--section-y) 0; }
 
   /* Envia os dados por e-mail (Web3Forms). Lança erro se falhar. */
   const sendEmail = async data => {
-    if (CONFIG.web3formsKey === 'COLE_SUA_CHAVE_AQUI') {
+    if (CONFIG.web3formsKey === '6ed770d4-5c81-4012-89cc-b38f697995cd') {
       console.warn('Modo demonstração: defina CONFIG.web3formsKey para enviar os pedidos por e-mail.');
       await new Promise(r => setTimeout(r, 700));
       return;
