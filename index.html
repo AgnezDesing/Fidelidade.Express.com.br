@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fidelidade Express | Entregas Expressas via Motoboy em SP</title>
+<meta name="description" content="Entregas expressas via motoboy em São Paulo, Grande SP, Litoral e Interior. Pontualidade, segurança e atendimento corporativo.">
+<meta name="theme-color" content="#0A0F1C">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Fidelidade Express | Confiança se entrega">
+<meta property="og:description" content="Entregas expressas via motoboy em São Paulo, Grande SP, Litoral e Interior.">
+<script>document.documentElement.classList.add('js')</script><!-- habilita as animações só se o JS estiver ativo -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%230A0F1C'/%3E%3Cg transform='translate(2 -2) scale(.95)' fill='none' stroke='%23D4AF37' stroke-width='2.8'%3E%3Cpath d='M24 6 40 22 24 38 8 22z'/%3E%3Cpath d='M24 14 40 30 24 46 8 30z'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@300;400;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+
+<style>
+/* =========================================================
+   1. VARIÁVEIS E RESET
+   ========================================================= */
+:root {
+  --navy-900: #0A0F1C;
+  --navy-800: #121B30;
+  --gold: #D4AF37;
+  --gold-hover: #E5C158;
+  --gold-soft: #E9D68B;
+  --gold-grad: linear-gradient(100deg, #A98A2C 0%, #EBD88F 32%, #BF9B30 58%, #E8D38A 82%, #E3C9AE 100%);
+  --font-brand: 'Oswald', 'Bebas Neue', 'Arial Narrow', sans-serif;
+  --white: #FFFFFF;
+  --offwhite: #F8F9FA;
+  --ink: #0F172A;
+  --ink-soft: #475569;
+  --mist: #CBD5E1;
+  --mist-light: #E2E8F0;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow-sm: 0 2px 8px rgba(10, 15, 28, .08);
+  --shadow-md: 0 10px 30px rgba(10, 15, 28, .12);
+  --shadow-lg: 0 20px 50px rgba(10, 15, 28, .25);
+  --font-title: 'Plus Jakarta Sans', 'Montserrat', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --header-h: 72px;
+  --section-y: clamp(2.5rem, 5vw, 3.75rem); /* respiro vertical entre seções */
+  --head-gap: clamp(1.5rem, 3vw, 2.25rem);  /* espaço entre título da seção e conteúdo */
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 8px); }
+body { font-family: var(--font-body); color: var(--ink-soft); background: var(--white); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+img, svg { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+button, input, select, textarea { font: inherit; }
+h1, h2, h3, h4 { font-family: var(--font-title); color: var(--ink); line-height: 1.2; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+.container { width: min(1180px, 100% - 2.5rem); margin-inline: auto; }
+section { padding: var(--section-y) 0; }
+.eyebrow { display: inline-block; font-family: var(--font-title); font-weight: 700; font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: .75rem; }
+.section-head { max-width: 680px; margin-bottom: var(--head-gap); }
+.section-head h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: .75rem; }
+.section-head.center { margin-inline: auto; text-align: center; }
+.section-head.center .eyebrow { display: inline-flex; align-items: center; gap: .9rem; }
+.section-head.center .eyebrow::before, .section-head.center .eyebrow::after { content: ''; width: 44px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold)); }
+.section-head.center .eyebrow::after { transform: scaleX(-1); }
+
+/* =========================================================
+   2. BOTÕES
+   ========================================================= */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .85rem 1.6rem; border-radius: var(--radius-sm); font-family: var(--font-title); font-weight: 700; font-size: .95rem; border: 2px solid transparent; cursor: pointer; transition: transform .2s, background .2s, box-shadow .2s, color .2s, border-color .2s; }
+.btn:hover { transform: translateY(-2px); }
+.btn-gold { background: linear-gradient(115deg, #B38F26 0%, #E9D27A 28%, #D4AF37 50%, #F3E3A2 74%, #C9A236 100%); background-size: 220% 100%; background-position: 0% 50%; color: var(--navy-900); border-color: rgba(255,255,255,.18); text-shadow: 0 1px 0 rgba(255,255,255,.35); box-shadow: 0 6px 18px rgba(212,175,55,.3), inset 0 1px 0 rgba(255,255,255,.45); }
+.btn-gold:hover { background-position: 100% 50%; box-shadow: 0 10px 26px rgba(212,175,55,.45), inset 0 1px 0 rgba(255,255,255,.55); }
+.btn-outline { border-color: rgba(255,255,255,.35); color: var(--white); background: transparent; }
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+.btn-block { width: 100%; }
+
+/* Barra de progresso de rolagem */
+.scroll-progress { position: fixed; top: 0; left: 0; right: 0; height: 4px; z-index: 120; background: transparent; pointer-events: none; }
+.scroll-progress__bar { height: 100%; width: 100%; background: linear-gradient(90deg, var(--gold), var(--gold-hover)); box-shadow: 0 0 10px rgba(212,175,55,.6); transform: scaleX(0); transform-origin: left center; will-change: transform; }
+
+/* =========================================================
+   3. HEADER (glassmorphism discreto)
+   ========================================================= */
+.header { position: fixed; inset: 0 0 auto 0; height: var(--header-h); z-index: 100; background: rgba(10,15,28,.72); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(255,255,255,.08); transition: background .3s; }
+.header.scrolled { background: rgba(10,15,28,.92); }
+.header .container { height: 100%; display: flex; align-items: center; justify-content: space-between; }
+.logo { color: var(--white); display: inline-flex; align-items: center; gap: .65rem; }
+.logo-mark { width: 42px; height: 49px; flex: none; }
+.logo-text { display: flex; flex-direction: column; line-height: 1; }
+.logo-text b { font-family: var(--font-brand); font-weight: 700; font-size: 1.4rem; letter-spacing: .05em; text-transform: uppercase; background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.logo-text small { display: flex; align-items: center; gap: .4rem; margin-top: 4px; font-family: var(--font-brand); font-weight: 300; font-size: .68rem; letter-spacing: .34em; text-transform: uppercase; color: var(--gold-soft); }
+.logo-text small::before, .logo-text small::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--gold)); }
+.logo-text small::after { transform: scaleX(-1); }
+
+/* Versão vertical do logotipo (como no cartão de visita) */
+.logo--stack { flex-direction: column; gap: .5rem; text-align: center; }
+.logo--stack .logo-mark { width: 84px; height: 98px; }
+.logo--stack .logo-text { align-items: stretch; }
+.logo--stack .logo-text b { font-size: clamp(2.6rem, 9vw, 4.2rem); letter-spacing: .03em; }
+.logo--stack .logo-text small { font-size: clamp(1rem, 3.2vw, 1.5rem); font-weight: 400; letter-spacing: .22em; margin-top: .5rem; gap: 1rem; }
+.footer-brand { display: flex; flex-direction: column; align-items: center; gap: 1rem; padding-bottom: 1.75rem; margin-bottom: 1.75rem; border-bottom: 1px solid rgba(255,255,255,.08); }
+
+/* Assinatura "Confiança se entrega" (linhas douradas como no cartão) */
+.tagline { display: flex; align-items: center; justify-content: center; gap: .7rem; white-space: nowrap; font-family: var(--font-brand); font-weight: 300; font-size: .85rem; letter-spacing: .16em; text-transform: uppercase; color: var(--white); margin-bottom: 1.1rem; }
+.tagline::before, .tagline::after { content: ''; width: clamp(28px, 8vw, 90px); height: 1px; background: linear-gradient(90deg, transparent, var(--gold)); }
+.tagline::after { transform: scaleX(-1); }
+.tagline--plain { margin: 0; font-size: 1.05rem; } /* versão do rodapé, sem linhas */
+.tagline--plain::before, .tagline--plain::after { display: none; }
+.nav { display: none; align-items: center; gap: 2rem; }
+.nav a:not(.btn) { color: var(--mist-light); font-weight: 500; font-size: .93rem; position: relative; transition: color .2s; }
+.nav a:not(.btn)::after { content: ''; position: absolute; left: 0; bottom: -6px; width: 0; height: 2px; background: var(--gold); transition: width .25s; }
+.nav a:not(.btn):hover { color: var(--white); }
+.nav a:not(.btn):hover::after { width: 100%; }
+.nav .btn { padding: .6rem 1.2rem; font-size: .88rem; }
+.burger { background: none; border: 0; width: 44px; height: 44px; display: grid; place-items: center; cursor: pointer; }
+.burger span, .burger span::before, .burger span::after { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; position: relative; transition: transform .3s, background .3s; }
+.burger span::before, .burger span::after { content: ''; position: absolute; left: 0; }
+.burger span::before { top: -7px; } .burger span::after { top: 7px; }
+.burger[aria-expanded="true"] span { background: transparent; }
+.burger[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
+.burger[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
+
+/* Menu mobile */
+.nav.open { display: flex; position: absolute; top: var(--header-h); left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: 1rem 1.25rem 1.5rem; background: rgba(10,15,28,.97); border-bottom: 1px solid rgba(255,255,255,.08); }
+.nav.open a:not(.btn) { padding: .9rem 0; border-bottom: 1px solid rgba(255,255,255,.07); }
+.nav.open .btn { margin-top: 1rem; }
+@media (min-width: 900px) {
+  .nav { display: flex; }
+  .burger { display: none; }
+}
+
+/* =========================================================
+   4. HERO
+   ========================================================= */
+.hero { position: relative; text-align: center; padding: calc(var(--header-h) + clamp(2rem, 5vw, 3.25rem)) 0 clamp(2.5rem, 5vw, 3.5rem); background: var(--navy-900); overflow: hidden; color: var(--mist); }
+.hero::before { /* Padrão geométrico sutil */
+  content: ''; position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at 50% 38%, #000 20%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 38%, #000 20%, transparent 75%);
+}
+.hero::after { /* Brilho dourado discreto, centralizado */ content: ''; position: absolute; width: 760px; height: 560px; left: 50%; top: -220px; transform: translateX(-50%); background: radial-gradient(ellipse, rgba(212,175,55,.2), transparent 65%); pointer-events: none; }
+.hero .container { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: clamp(1.75rem, 4vw, 2.5rem); }
+.hero-content { max-width: 860px; }
+.hero h1 { text-wrap: balance; font-family: var(--font-brand); text-transform: uppercase; color: var(--white); font-size: clamp(2.3rem, 6vw, 3.9rem); font-weight: 700; letter-spacing: .01em; line-height: 1.1; margin-bottom: 1.25rem; }
+.hero h1 em { font-style: normal; background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero-diamonds { position: absolute; left: 50%; top: 44%; width: min(780px, 100vw); aspect-ratio: 1; transform: translate(-50%, -50%); opacity: .13; pointer-events: none; }
+.hero p.lead { font-size: 1.15rem; color: var(--mist); max-width: 640px; margin: 0 auto 2.25rem; }
+.hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: .9rem; }
+.hero-trust { display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem 1.75rem; margin-top: 2rem; font-size: .9rem; color: var(--mist); }
+.hero-trust li { display: flex; align-items: center; gap: .5rem; }
+.hero-trust svg { color: var(--gold); width: 18px; height: 18px; }
+
+/* Faixa de cobertura (4 regiões) */
+.hero-coverage { width: 100%; display: flex; flex-direction: column; align-items: center; }
+.hero-strip { width: 100%; max-width: 1040px; display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1px; background: rgba(212,175,55,.22); border: 1px solid rgba(212,175,55,.22); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-lg); text-align: left; }
+.hero-strip li { display: flex; align-items: center; gap: .9rem; padding: 1.25rem 1.5rem; background: rgba(14,21,39,.92); transition: background .25s; }
+.hero-strip li:hover { background: rgba(22,32,58,.95); }
+.strip-icon { flex: none; width: 42px; height: 42px; border-radius: 10px; background: rgba(212,175,55,.12); color: var(--gold); display: grid; place-items: center; }
+.strip-icon svg { width: 22px; height: 22px; }
+.hero-strip strong { display: block; font-family: var(--font-title); color: var(--white); font-size: .98rem; line-height: 1.25; }
+.hero-strip span { font-size: .8rem; color: var(--mist); }
+.strip-label { font-family: var(--font-brand); font-weight: 400; font-size: .85rem; letter-spacing: .22em; text-transform: uppercase; color: var(--gold-soft); margin-bottom: 1rem; }
+
+@media (max-width: 640px) {
+  .hero-strip { grid-template-columns: 1fr 1fr; }
+  .hero-strip li { padding: .85rem .9rem; gap: .6rem; }
+  .strip-icon { width: 34px; height: 34px; }
+  .strip-icon svg { width: 18px; height: 18px; }
+  .hero-strip strong { font-size: .9rem; }
+  .hero-strip span { font-size: .72rem; line-height: 1.3; display: block; }
+  .strip-label { margin-bottom: .75rem; }
+}
+
+/* =========================================================
+   5. ÁREAS DE ATUAÇÃO
+   ========================================================= */
+.areas { background: var(--offwhite); }
+.grid-4 { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
+.card { background: var(--white); border: 1px solid var(--mist-light); border-radius: var(--radius); padding: 1.75rem; box-shadow: var(--shadow-sm); transition: transform .25s, box-shadow .25s, border-color .25s; }
+.card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: var(--gold); }
+.card-icon { width: 52px; height: 52px; border-radius: 12px; background: var(--navy-900); color: var(--gold); display: grid; place-items: center; margin-bottom: 1.1rem; }
+.card-icon svg { width: 26px; height: 26px; }
+.card h3 { font-size: 1.2rem; margin-bottom: .5rem; }
+.card p { font-size: .95rem; margin-bottom: 1rem; }
+.card .meta { font-size: .8rem; font-weight: 600; color: var(--navy-800); padding-top: .9rem; border-top: 1px dashed var(--mist); display: flex; align-items: center; gap: .4rem; }
+.card .meta svg { width: 15px; height: 15px; color: var(--gold); }
+
+/* =========================================================
+   6. COMO FUNCIONA
+   ========================================================= */
+.steps { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+.step { position: relative; padding: 2rem 1.75rem; background: var(--white); border: 1px solid var(--mist-light); border-radius: var(--radius); box-shadow: var(--shadow-sm); }
+.step-num { font-family: var(--font-title); font-weight: 800; font-size: 2.6rem; line-height: 1; color: var(--gold); opacity: .9; margin-bottom: 1rem; }
+.step h3 { font-size: 1.2rem; margin-bottom: .5rem; }
+.step p { font-size: .95rem; }
+@media (min-width: 900px) {
+  .step:not(:last-child)::after { content: ''; position: absolute; top: 3.2rem; right: -1.5rem; width: 1.5rem; height: 2px; background: repeating-linear-gradient(90deg, var(--gold) 0 6px, transparent 6px 12px); }
+}
+
+/* =========================================================
+   7. VANTAGENS
+   ========================================================= */
+.benefits { background: var(--navy-900); color: var(--mist); position: relative; overflow: hidden; }
+.benefits::before { content: ''; position: absolute; width: 420px; height: 420px; left: -120px; bottom: -160px; background: radial-gradient(circle, rgba(212,175,55,.14), transparent 65%); }
+.benefits .container { position: relative; }
+.benefits h2 { color: var(--white); }
+.benefits .section-head p { color: var(--mist); }
+.grid-3 { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); }
+.benefit { background: var(--navy-800); border: 1px solid rgba(255,255,255,.07); border-radius: var(--radius); padding: 1.75rem; transition: transform .25s, border-color .25s; }
+.benefit:hover { transform: translateY(-5px); border-color: rgba(212,175,55,.5); }
+.benefit .ico { width: 48px; height: 48px; border-radius: 12px; background: rgba(212,175,55,.12); color: var(--gold); display: grid; place-items: center; margin-bottom: 1.1rem; }
+.benefit .ico svg { width: 24px; height: 24px; }
+.benefit h3 { color: var(--white); font-size: 1.1rem; margin-bottom: .5rem; }
+.benefit p { font-size: .93rem; color: var(--mist); }
+
+/* =========================================================
+   8. BANNER CTA
+   ========================================================= */
+.cta-banner { padding: 0; background: var(--white); }
+.cta-box { background: linear-gradient(120deg, var(--navy-900), var(--navy-800)); border-radius: 16px; padding: 2.25rem 1.5rem; margin: var(--section-y) 0; position: relative; overflow: hidden; display: grid; gap: 1.5rem; align-items: center; border-left: 6px solid var(--gold); box-shadow: var(--shadow-lg); }
+.cta-box::after { content: ''; position: absolute; right: -60px; top: -60px; width: 220px; height: 220px; border: 2px solid rgba(212,175,55,.2); border-radius: 50%; }
+.cta-box h2 { color: var(--white); font-size: clamp(1.5rem, 3.5vw, 2.1rem); margin-bottom: .6rem; }
+.cta-box p { color: var(--mist); max-width: 620px; }
+@media (min-width: 860px) { .cta-box { grid-template-columns: 1fr auto; padding: 2.5rem 3rem; } }
+
+/* =========================================================
+   9. FAQ (acordeão)
+   ========================================================= */
+.faq { background: var(--offwhite); }
+.faq-list { max-width: 820px; margin-inline: auto; display: grid; gap: .7rem; }
+.faq-item { background: var(--white); border: 1px solid var(--mist-light); border-radius: var(--radius); overflow: hidden; transition: border-color .25s, box-shadow .25s; }
+.faq-item.open { border-color: var(--gold); box-shadow: var(--shadow-md); }
+.faq-q { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 1rem; text-align: left; padding: 1.15rem 1.4rem; background: none; border: 0; cursor: pointer; font-family: var(--font-title); font-weight: 700; font-size: 1.02rem; color: var(--ink); }
+.faq-q .chev { flex: none; width: 22px; height: 22px; color: var(--gold); transition: transform .3s; }
+.faq-item.open .chev { transform: rotate(180deg); }
+.faq-a { max-height: 0; overflow: hidden; visibility: hidden; transition: max-height .35s ease, visibility 0s .35s; }
+.faq-item.open .faq-a { visibility: visible; transition-delay: 0s; }
+.faq-a p { padding: 0 1.4rem 1.3rem; font-size: .96rem; }
+
+/* =========================================================
+   10. FORMULÁRIO
+   ========================================================= */
+.quote .container { display: grid; gap: clamp(1.75rem, 4vw, 2.5rem); align-items: start; }
+@media (min-width: 960px) { .quote .container { grid-template-columns: .9fr 1.1fr; } }
+.quote-info h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 1rem; }
+.quote-info ul { margin-top: 1.5rem; display: grid; gap: .9rem; }
+.quote-info li { display: flex; gap: .75rem; align-items: flex-start; }
+.quote-info li svg { flex: none; width: 22px; height: 22px; color: var(--gold); margin-top: 2px; }
+.form-card { background: var(--white); border: 1px solid var(--mist-light); border-radius: 16px; padding: 2rem; box-shadow: var(--shadow-md); }
+.form-grid { display: grid; gap: 1.1rem; }
+@media (min-width: 640px) { .form-grid { grid-template-columns: 1fr 1fr; } .full { grid-column: 1 / -1; } }
+.field label { display: block; font-size: .85rem; font-weight: 600; color: var(--ink); margin-bottom: .4rem; }
+.field input, .field select, .field textarea { width: 100%; padding: .8rem .95rem; border: 1.5px solid var(--mist); border-radius: var(--radius-sm); background: var(--offwhite); color: var(--ink); transition: border-color .2s, box-shadow .2s, background .2s; }
+.field textarea { resize: vertical; min-height: 110px; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--gold); background: var(--white); box-shadow: 0 0 0 4px rgba(212,175,55,.18); }
+.field.invalid input, .field.invalid select, .field.invalid textarea { border-color: #dc2626; background: #fef2f2; }
+.field .err { display: none; color: #dc2626; font-size: .78rem; margin-top: .3rem; }
+.field.invalid .err { display: block; }
+.form-success { display: none; text-align: center; padding: 2rem 1rem; }
+.form-success.show { display: block; animation: fadeUp .5s ease; }
+.form-success .check { width: 64px; height: 64px; margin: 0 auto 1rem; border-radius: 50%; background: rgba(212,175,55,.15); color: var(--gold); display: grid; place-items: center; }
+.form-success .check svg { width: 32px; height: 32px; }
+.form-success h3 { font-size: 1.4rem; margin-bottom: .5rem; }
+.form-error { display: none; margin-top: .9rem; padding: .85rem 1rem; border-radius: var(--radius-sm); background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; font-size: .88rem; }
+.form-error.show { display: block; }
+.form-error a { font-weight: 700; text-decoration: underline; }
+.success-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; margin-top: 1.25rem; }
+.btn-dark-outline { border-color: var(--mist); color: var(--ink); background: transparent; }
+.btn-dark-outline:hover { border-color: var(--gold); color: var(--navy-900); }
+.form-privacy { font-size: .78rem; color: var(--ink-soft); margin-top: .9rem; text-align: center; }
+.btn[disabled] { opacity: .7; cursor: wait; transform: none; }
+
+/* =========================================================
+   11. FOOTER
+   ========================================================= */
+.footer { background: var(--navy-900); color: var(--mist); padding: 2.5rem 0 1.25rem; border-top: 3px solid var(--gold); }
+.footer-grid { display: grid; gap: 1.75rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); margin-bottom: 1.75rem; }
+.footer h4 { color: var(--white); font-size: .95rem; margin-bottom: 1rem; }
+.footer p, .footer li { font-size: .9rem; }
+.footer ul { display: grid; gap: .55rem; }
+.footer a:hover { color: var(--gold); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding-top: 1.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .75rem; font-size: .82rem; color: #94a3b8; }
+
+/* WhatsApp flutuante */
+.wa-float { position: fixed; right: 1.1rem; bottom: calc(1.1rem + env(safe-area-inset-bottom, 0px)); z-index: 90; width: 56px; height: 56px; border-radius: 50%; background: #25D366; color: #fff; display: grid; place-items: center; box-shadow: 0 8px 22px rgba(0,0,0,.3); transition: transform .2s; }
+.wa-float:hover { transform: scale(1.08); }
+.wa-float svg { width: 28px; height: 28px; }
+
+/* Cartões mais compactos no celular (menos rolagem) */
+@media (max-width: 640px) {
+  .card, .benefit { padding: 1.25rem; }
+  .card-icon { margin-bottom: .85rem; }
+  .step { padding: 1.35rem 1.25rem; }
+  .step-num { font-size: 2.1rem; margin-bottom: .6rem; }
+  .form-card { padding: 1.25rem; }
+  .grid-4, .grid-3, .steps { gap: 1rem; }
+}
+
+/* =========================================================
+   12. ANIMAÇÕES DE ENTRADA
+   ========================================================= */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .55s ease, transform .55s ease; }
+.js .reveal.visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  * { animation: none !important; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Símbolo do logotipo (losangos duplos dourados) reutilizável via <use> -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="goldG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8F7425"/><stop offset=".35" stop-color="#F3E2A0"/><stop offset=".6" stop-color="#B8962E"/><stop offset="1" stop-color="#E9D68B"/>
+    </linearGradient>
+    <!-- Ícones reutilizados (herdam a cor via currentColor) -->
+    <symbol id="i-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></g></symbol>
+    <symbol id="i-check-bold" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></g></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></g></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></g></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18M3 12h18"/></g></symbol>
+    <symbol id="i-waves" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 18c2 0 2-1.5 4-1.5S8 18 10 18s2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5M2 12c2 0 2-1.5 4-1.5S8 12 10 12s2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5"/></g></symbol>
+    <symbol id="i-mountain" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 20 6-11 4 6 3-4 5 9z"/></g></symbol>
+    <symbol id="logo-diamond" viewBox="10 2 80 94">
+      <g fill="none" stroke="url(#goldG)" stroke-width="4.6" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path d="M50 8 84 42 50 76 16 42z"/><path d="M50 22 84 56 50 90 16 56z"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- Barra de evolução da rolagem -->
+<div class="scroll-progress" aria-hidden="true"><div class="scroll-progress__bar" id="scrollBar"></div></div>
+
+<!-- =================== HEADER =================== -->
+<header class="header" id="header">
+  <div class="container">
+    <a href="#inicio" class="logo" aria-label="Fidelidade Express - Início">
+      <svg class="logo-mark" aria-hidden="true"><use href="#logo-diamond"/></svg>
+      <span class="logo-text"><b>Fidelidade</b><small>Express</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Navegação principal">
+      <a href="#areas">Áreas de Atuação</a>
+      <a href="#como-funciona">Como Funciona</a>
+      <a href="#vantagens">Vantagens</a>
+      <a href="#faq">FAQ</a>
+      <a href="#cotacao" class="btn btn-gold">Solicitar Cotação</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><span></span></button>
+  </div>
+</header>
+
+<main>
+<!-- =================== HERO =================== -->
+<section class="hero" id="inicio">
+  <!-- Losangos duplos (referência ao cartão de visita) -->
+  <svg class="hero-diamonds" viewBox="0 0 100 100" fill="none" stroke="url(#goldG)" stroke-width="2" aria-hidden="true"><path vector-effect="non-scaling-stroke" d="M50 8 84 42 50 76 16 42z"/><path vector-effect="non-scaling-stroke" d="M50 22 84 56 50 90 16 56z"/></svg>
+
+  <div class="container">
+    <div class="hero-content reveal">
+      <p class="tagline">Confiança se entrega</p>
+      <h1>Entregas rápidas e <em>confiáveis</em> em SP, Grande SP, Litoral e Interior.</h1>
+      <p class="lead">Agilidade, compromisso com o prazo e atendimento corporativo dedicado. Sua empresa solicita, nós coletamos e entregamos com confirmação.</p>
+      <div class="hero-actions">
+        <a href="#cotacao" class="btn btn-gold">Solicitar Orçamento Agora</a>
+        <!-- WhatsApp oficial: abre conversa direta com mensagem inicial -->
+        <a href="https://wa.me/5511981019957?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="btn btn-outline">Falar no WhatsApp</a>
+      </div>
+      <ul class="hero-trust">
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Atendimento corporativo</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Confirmação de entrega</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Contratos para empresas</li>
+      </ul>
+    </div>
+
+    <!-- Faixa de cobertura: as 4 regiões atendidas -->
+    <div class="hero-coverage reveal">
+      <p class="strip-label">Regiões atendidas</p>
+      <ul class="hero-strip">
+        <li><span class="strip-icon"><svg aria-hidden="true"><use href="#i-building"/></svg></span><div><strong>São Paulo</strong><span>Capital</span></div></li>
+        <li><span class="strip-icon"><svg aria-hidden="true"><use href="#i-globe"/></svg></span><div><strong>Grande SP</strong><span>Região metropolitana</span></div></li>
+        <li><span class="strip-icon"><svg aria-hidden="true"><use href="#i-waves"/></svg></span><div><strong>Litoral</strong><span>Cidades litorâneas</span></div></li>
+        <li><span class="strip-icon"><svg aria-hidden="true"><use href="#i-mountain"/></svg></span><div><strong>Interior</strong><span>Cidades do interior</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- =================== ÁREAS DE ATUAÇÃO =================== -->
+<section class="areas" id="areas">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Áreas de Atuação</span>
+      <h2>Cobertura onde o seu negócio precisa</h2>
+      <p>Da capital ao interior, organizamos rotas pensadas para manter a agilidade e o controle de cada entrega.</p>
+    </div>
+    <div class="grid-4">
+      <article class="card reveal">
+        <div class="card-icon"><svg aria-hidden="true"><use href="#i-building"/></svg></div>
+        <h3>São Paulo (Capital)</h3>
+        <p>Entregas urbanas ágeis para documentos, encomendas e cargas leves, com foco em coleta rápida e prazos curtos.</p>
+        <div class="meta"><svg aria-hidden="true"><use href="#i-clock"/></svg>Atendimento expresso</div>
+      </article>
+      <article class="card reveal">
+        <div class="card-icon"><svg aria-hidden="true"><use href="#i-globe"/></svg></div>
+        <h3>Grande SP</h3>
+        <p>Conexão eficiente entre a capital e os municípios da região metropolitana, ideal para rotinas comerciais e industriais.</p>
+        <div class="meta"><svg aria-hidden="true"><use href="#i-clock"/></svg>Rotas otimizadas</div>
+      </article>
+      <article class="card reveal">
+        <div class="card-icon"><svg aria-hidden="true"><use href="#i-waves"/></svg></div>
+        <h3>Litoral</h3>
+        <p>Atendimento para cidades litorâneas com planejamento de rota e acompanhamento do início ao fim da entrega.</p>
+        <div class="meta"><svg aria-hidden="true"><use href="#i-clock"/></svg>Agendamento facilitado</div>
+      </article>
+      <article class="card reveal">
+        <div class="card-icon"><svg aria-hidden="true"><use href="#i-mountain"/></svg></div>
+        <h3>Interior</h3>
+        <p>Alcance para cidades do interior paulista, com comprometimento em cada etapa e comunicação direta com o cliente.</p>
+        <div class="meta"><svg aria-hidden="true"><use href="#i-clock"/></svg>Consulte disponibilidade</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =================== COMO FUNCIONA =================== -->
+<section id="como-funciona">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Como Funciona</span>
+      <h2>Comece em três passos simples</h2>
+      <p>Um processo direto, pensado para quem não pode perder tempo.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="step-num">01</div><h3>Solicitação</h3><p>Envie o chamado pelo formulário ou WhatsApp informando origem, destino e tipo de envio.</p></div>
+      <div class="step reveal"><div class="step-num">02</div><h3>Coleta Rápida</h3><p>Um motoboy é direcionado ao ponto de coleta para retirar sua encomenda com agilidade.</p></div>
+      <div class="step reveal"><div class="step-num">03</div><h3>Entrega com Confirmação</h3><p>A entrega é realizada com segurança e você recebe a confirmação de conclusão.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== VANTAGENS =================== -->
+<section class="benefits" id="vantagens">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Por que escolher a Fidelidade Express</span>
+      <h2>Compromisso que sua empresa percebe</h2>
+      <p>Diferenciais operacionais para quem precisa de uma parceria logística confiável.</p>
+    </div>
+    <div class="grid-3">
+      <article class="benefit reveal"><div class="ico"><svg aria-hidden="true"><use href="#i-clock"/></svg></div><h3>Pontualidade</h3><p>Prazos tratados como compromisso. Planejamento de rotas para cumprir o combinado.</p></article>
+      <article class="benefit reveal"><div class="ico"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Segurança na carga</h3><p>Cuidado com documentos e encomendas, do momento da coleta até a entrega final.</p></article>
+      <article class="benefit reveal"><div class="ico"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></div><h3>Atendimento ágil</h3><p>Respostas rápidas para cotações e chamados, sem burocracia desnecessária.</p></article>
+      <article class="benefit reveal"><div class="ico"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div><h3>Planos para empresas</h3><p>Contratos e condições recorrentes para negócios com demanda frequente de entregas.</p></article>
+      <article class="benefit reveal"><div class="ico"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></div><h3>Cobertura ampla</h3><p>Capital, Grande SP, Litoral e Interior em uma única parceria.</p></article>
+      <article class="benefit reveal"><div class="ico"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3>Suporte direto</h3><p>Canal direto com a equipe para acompanhar solicitações e resolver imprevistos.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- =================== BANNER CTA =================== -->
+<section class="cta-banner" aria-label="Chamada para empresas">
+  <div class="container">
+    <div class="cta-box reveal">
+      <div>
+        <h2>Envia encomendas com frequência? Monte sua rotina de entregas expressas.</h2>
+        <p>Empresas e comércios podem contar com atendimento recorrente, condições sob medida e processos simples para o dia a dia.</p>
+      </div>
+      <a href="#cotacao" class="btn btn-gold">Quero uma proposta</a>
+    </div>
+  </div>
+</section>
+
+<!-- =================== FAQ =================== -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2>Perguntas frequentes</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a1">Quais regiões vocês atendem?<svg class="chev" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <div class="faq-a" id="faq-a1" role="region"><p>Atendemos São Paulo (Capital), Grande SP, Litoral e Interior. Para destinos específicos, informe origem e destino no formulário e confirmaremos a disponibilidade e as condições.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a2">Que tipos de envio vocês realizam?<svg class="chev" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <div class="faq-a" id="faq-a2" role="region"><p>Documentos, contratos, amostras e encomendas de pequeno porte compatíveis com transporte por motoboy. Em caso de dúvida sobre peso, dimensões ou natureza do item, fale com nossa equipe antes de solicitar.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a3">Como solicito uma coleta?<svg class="chev" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <div class="faq-a" id="faq-a3" role="region"><p>Preencha o formulário desta página ou chame pelo WhatsApp informando endereço de coleta, destino e tipo de envio. Nossa equipe retorna com o orçamento e organiza a coleta.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a4">Vocês atendem empresas com demanda recorrente?<svg class="chev" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <div class="faq-a" id="faq-a4" role="region"><p>Sim. Oferecemos atendimento recorrente e condições comerciais para empresas e comércios com envios frequentes. Solicite uma proposta e adaptamos o serviço à sua rotina.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== FORMULÁRIO =================== -->
+<section class="quote" id="cotacao">
+  <div class="container">
+    <div class="quote-info reveal">
+      <span class="eyebrow">Solicitar Cotação</span>
+      <h2>Fale com a Fidelidade Express</h2>
+      <p>Conte o que sua empresa precisa e retornaremos com uma proposta clara e objetiva.</p>
+      <ul>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Retorno comercial direto</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Condições para empresas e recorrência</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Capital, Grande SP, Litoral e Interior</li>
+      </ul>
+    </div>
+
+    <div class="form-card reveal">
+      <form id="quoteForm" novalidate>
+        <!-- Campo oculto anti-spam (robôs preenchem, pessoas não) -->
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none">
+        <div class="form-grid">
+          <div class="field"><label for="nome">Nome *</label><input type="text" id="nome" name="nome" autocomplete="name" required><span class="err">Informe seu nome.</span></div>
+          <div class="field"><label for="empresa">Empresa *</label><input type="text" id="empresa" name="empresa" autocomplete="organization" required><span class="err">Informe o nome da empresa.</span></div>
+          <div class="field"><label for="email">E-mail *</label><input type="email" id="email" name="email" autocomplete="email" required><span class="err">Informe um e-mail válido.</span></div>
+          <div class="field"><label for="telefone">Telefone / WhatsApp *</label><input type="tel" inputmode="tel" id="telefone" name="telefone" autocomplete="tel" placeholder="(11) 90000-0000" required><span class="err">Informe um telefone com DDD.</span></div>
+          <div class="field full"><label for="regiao">Região de origem / destino *</label>
+            <select id="regiao" name="regiao" required>
+              <option value="">Selecione</option>
+              <option>São Paulo (Capital)</option>
+              <option>Grande SP</option>
+              <option>Litoral</option>
+              <option>Interior</option>
+              <option>Entre regiões diferentes</option>
+            </select><span class="err">Selecione uma região.</span></div>
+          <div class="field full"><label for="mensagem">Tipo de necessidade / mensagem *</label><textarea id="mensagem" name="mensagem" placeholder="Ex.: entregas diárias de documentos entre a capital e a Grande SP." required></textarea><span class="err">Descreva brevemente sua necessidade.</span></div>
+          <div class="full"><button type="submit" class="btn btn-gold btn-block" id="submitBtn">Solicitar Cotação</button></div>
+        </div>
+        <p class="form-error" id="formError" role="alert"></p>
+        <p class="form-privacy">Seus dados serão usados apenas para retorno comercial.</p>
+      </form>
+
+      <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+        <div class="check"><svg aria-hidden="true"><use href="#i-check-bold"/></svg></div>
+        <h3>Solicitação enviada!</h3>
+        <p>Recebemos seus dados e nossa equipe entrará em contato em breve. Para agilizar, você também pode continuar a conversa pelo WhatsApp.</p>
+        <div class="success-actions">
+          <a class="btn btn-gold" id="waFollow" href="#" target="_blank" rel="noopener">Continuar no WhatsApp</a>
+          <button type="button" class="btn btn-dark-outline" id="newQuote">Enviar nova solicitação</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- =================== FOOTER =================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-brand">
+      <a href="#inicio" class="logo logo--stack" aria-label="Fidelidade Express - Início"><svg class="logo-mark" aria-hidden="true"><use href="#logo-diamond"/></svg><span class="logo-text"><b>Fidelidade</b><small>Express</small></span></a>
+      <p class="tagline tagline--plain">Confiança se entrega</p>
+    </div>
+    <div class="footer-grid">
+      <div>
+        <h4>Sobre</h4>
+        <p>Entregas expressas via motoboy com compromisso, agilidade e atendimento corporativo.</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul><li><a href="#areas">Áreas de Atuação</a></li><li><a href="#como-funciona">Como Funciona</a></li><li><a href="#vantagens">Vantagens</a></li><li><a href="#faq">FAQ</a></li></ul>
+      </div>
+      <div>
+        <h4>Regiões atendidas</h4>
+        <ul><li>São Paulo (Capital)</li><li>Grande SP</li><li>Litoral</li><li>Interior</li></ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul><li>WhatsApp: <a href="https://wa.me/5511981019957?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener">+55 11 98101-9957</a></li><li><a href="mailto:faleconosco.f.express@gmail.com">faleconosco.f.express@gmail.com</a></li><li>Seg a Sex, horário comercial</li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Fidelidade Express. Todos os direitos reservados.</span>
+      <span>CNPJ: 42.094.106/0001-41</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp flutuante -->
+<a class="wa-float" href="https://wa.me/5511981019957?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.300.2-1.400-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15l-1.4 5 5.1-1.3A10 10 0 1 0 12 2z"/></svg>
+</a>
+
+<script>
+/* =========================================================
+   JAVASCRIPT (Vanilla)
+   ========================================================= */
+(() => {
+  'use strict';
+
+  /* ---- CONFIGURAÇÃO ----
+     web3formsKey: chave gratuita gerada em https://web3forms.com (informe o e-mail que receberá os pedidos).
+     Enquanto estiver com o valor padrão, o formulário roda em modo demonstração (não envia e-mail). */
+  const CONFIG = {
+    web3formsKey: 'COLE_SUA_CHAVE_AQUI',
+    whatsapp: '5511981019957'
+  };
+
+  const $  = (sel, ctx = document) => ctx.querySelector(sel);
+  const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
+
+  /* ---- Ano dinâmico no rodapé ---- */
+  $('#year').textContent = new Date().getFullYear();
+
+  /* ---- Header + barra de progresso (atualizados via requestAnimationFrame) ---- */
+  const header = $('#header');
+  const bar = $('#scrollBar');
+  let ticking = false;
+  const update = () => {
+    ticking = false;
+    const y = window.scrollY;
+    header.classList.toggle('scrolled', y > 20);
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.transform = `scaleX(${max > 0 ? Math.min(y / max, 1) : 0})`;
+  };
+  const requestUpdate = () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
+  window.addEventListener('scroll', requestUpdate, { passive: true });
+  window.addEventListener('resize', requestUpdate);
+  update();
+
+  /* ---- Menu mobile ---- */
+  const burger = $('#burger');
+  const nav = $('#nav');
+  const setMenu = open => {
+    nav.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+  };
+  burger.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
+  nav.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+  window.matchMedia('(min-width: 900px)').addEventListener('change', e => { if (e.matches) setMenu(false); });
+
+  /* ---- Animações de entrada (IntersectionObserver) ----
+     Após animar, a classe .reveal é removida para não interferir
+     nas transições de hover dos cartões. */
+  const reveals = $$('.reveal');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!('IntersectionObserver' in window) || reduceMotion) {
+    reveals.forEach(el => el.classList.add('visible'));
+  } else {
+    const io = new IntersectionObserver((entries, obs) => {
+      entries.filter(en => en.isIntersecting).forEach((en, i) => {
+        const el = en.target;
+        const delay = i * 70; // leve escalonamento entre itens que entram juntos
+        el.style.transitionDelay = `${delay}ms`;
+        el.classList.add('visible');
+        obs.unobserve(el);
+        setTimeout(() => { el.classList.remove('reveal', 'visible'); el.style.transitionDelay = ''; }, delay + 700);
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    reveals.forEach(el => io.observe(el));
+  }
+
+  /* ---- FAQ: acordeão ---- */
+  const faqItems = $$('.faq-item');
+  const setFaq = (item, open) => {
+    const panel = $('.faq-a', item);
+    item.classList.toggle('open', open);
+    $('.faq-q', item).setAttribute('aria-expanded', String(open));
+    panel.style.maxHeight = open ? panel.scrollHeight + 'px' : null;
+  };
+  faqItems.forEach(item => {
+    $('.faq-q', item).addEventListener('click', () => {
+      const willOpen = !item.classList.contains('open');
+      faqItems.forEach(other => setFaq(other, false));
+      if (willOpen) setFaq(item, true);
+    });
+  });
+  // Recalcula a altura do item aberto se a largura da tela mudar
+  window.addEventListener('resize', () => faqItems.filter(i => i.classList.contains('open')).forEach(i => setFaq(i, true)));
+
+  /* ---- Formulário: validação e feedback ---- */
+  const form = $('#quoteForm');
+  const success = $('#formSuccess');
+  const submitBtn = $('#submitBtn');
+  const fields = $$('.field input, .field select, .field textarea', form);
+  const formError = $('#formError');
+  const waFollow = $('#waFollow');
+
+  const validators = {
+    nome:     v => v.trim().length >= 2,
+    empresa:  v => v.trim().length >= 2,
+    email:    v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()),
+    telefone: v => v.replace(/\D/g, '').length >= 10,
+    regiao:   v => v !== '',
+    mensagem: v => v.trim().length >= 5
+  };
+
+  const check = field => {
+    const ok = validators[field.name](field.value);
+    field.closest('.field').classList.toggle('invalid', !ok);
+    field.setAttribute('aria-invalid', String(!ok));
+    return ok;
+  };
+
+  // Máscara de telefone BR: (11) 9999-9999 ou (11) 99999-9999
+  const maskPhone = value => {
+    const d = value.replace(/\D/g, '').slice(0, 11);
+    if (d.length <= 2) return d;
+    const cut = d.length > 10 ? 5 : 4;
+    const rest = d.slice(2);
+    return `(${d.slice(0, 2)}) ${rest.slice(0, cut)}${rest.length > cut ? '-' + rest.slice(cut) : ''}`;
+  };
+  const tel = $('#telefone');
+  tel.addEventListener('input', () => { tel.value = maskPhone(tel.value); });
+
+  fields.forEach(f => {
+    f.addEventListener('blur', () => check(f));
+    f.addEventListener('input', () => { if (f.closest('.field').classList.contains('invalid')) check(f); });
+  });
+
+  /* Monta o link do WhatsApp com os dados preenchidos no formulário */
+  const buildWaLink = data => {
+    const texto = [
+      'Olá! Acabei de solicitar uma cotação pelo site:',
+      `Nome: ${data.nome}`,
+      `Empresa: ${data.empresa}`,
+      `E-mail: ${data.email}`,
+      `Telefone: ${data.telefone}`,
+      `Região: ${data.regiao}`,
+      `Necessidade: ${data.mensagem}`
+    ].join('\n');
+    return `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(texto)}`;
+  };
+
+  /* Envia os dados por e-mail (Web3Forms). Lança erro se falhar. */
+  const sendEmail = async data => {
+    if (CONFIG.web3formsKey === 'COLE_SUA_CHAVE_AQUI') {
+      console.warn('Modo demonstração: defina CONFIG.web3formsKey para enviar os pedidos por e-mail.');
+      await new Promise(r => setTimeout(r, 700));
+      return;
+    }
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 15000);
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        signal: ctrl.signal,
+        body: JSON.stringify({
+          access_key: CONFIG.web3formsKey,
+          subject: `Nova cotação pelo site – ${data.empresa}`,
+          from_name: 'Site Fidelidade Express',
+          botcheck: form.elements.botcheck.checked,
+          ...data
+        })
+      });
+      const json = await res.json();
+      if (!res.ok || !json.success) throw new Error(json.message || 'Falha no envio');
+    } finally {
+      clearTimeout(timer);
+    }
+  };
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    formError.classList.remove('show');
+    const results = fields.map(check);
+    const firstInvalid = results.indexOf(false);
+    if (firstInvalid !== -1) { fields[firstInvalid].focus(); return; }
+
+    const data = Object.fromEntries(fields.map(f => [f.name, f.value.trim()]));
+    const waLink = buildWaLink(data);
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Enviando...';
+
+    try {
+      await sendEmail(data);
+      waFollow.href = waLink;
+      form.hidden = true;
+      success.classList.add('show');
+      form.reset();
+    } catch (err) {
+      // Não perde o contato: oferece o envio direto pelo WhatsApp
+      formError.innerHTML = `Não foi possível enviar agora. <a href="${waLink}" target="_blank" rel="noopener">Envie sua solicitação pelo WhatsApp</a> ou tente novamente.`;
+      formError.classList.add('show');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Solicitar Cotação';
+    }
+  });
+
+  $('#newQuote').addEventListener('click', () => {
+    success.classList.remove('show');
+    form.hidden = false;
+  });
+})();
+</script>
+</body>
+</html>
